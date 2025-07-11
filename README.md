@@ -1,6 +1,7 @@
 # ReActIdle dataset
-This repository contains the dataset from the paper *Evaluating Idle Animation Believability: a User Perspective*. It also contains scripts to reproduce the results and graphs from the paper. 
+![Front page figure](figures/frontpage.png)
 
+This repository contains the dataset from the paper *Evaluating Idle Animation Believability: a User Perspective*. It also contains scripts to reproduce the results and graphs from the paper. 
 ## Dataset details
 The repository contains 16 clips of acted idle animations and 10 clips of genuine idle animations. The number of the clip matches the ID of the person performing the animation, so clip *000_genuine.bvh* and *000_acted.bvh* are made by the same person.
 

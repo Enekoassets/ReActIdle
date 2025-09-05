@@ -1,3 +1,5 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 # ReActIdle dataset
 ![Front page figure](figures/frontpage.png)
 
@@ -46,3 +48,9 @@ If you use this dataset in your research, please cite it as follows:
 ```
 NOT AVAILABLE, WILL BE CHANGED WHEN THE PAPER IS PUBLISHED
 ```
+## License
+
+The dataset provided in this repository is released under the **MIT License**.  
+You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the dataset, under the conditions outlined in the MIT License.
+
+See [LICENSE.txt](LICENSE.txt) for full license text.

@@ -46,7 +46,15 @@ Then, execute the *plotSpeeds.py* script. You will need to have numpy, pandas, s
 ## Citing
 If you use this dataset in your research, please cite it as follows:
 ```
-NOT AVAILABLE, WILL BE CHANGED WHEN THE PAPER IS PUBLISHED
+@misc{landa2025evaluatingidleanimationbelievability,
+      title={Evaluating Idle Animation Believability: a User Perspective}, 
+      author={Eneko Atxa Landa and Elena Lazkano and Igor Rodriguez and Itsaso Rodríguez-Moreno and Itziar Irigoien},
+      year={2025},
+      eprint={2509.05023},
+      archivePrefix={arXiv},
+      primaryClass={cs.HC},
+      url={https://arxiv.org/abs/2509.05023}, 
+}
 ```
 ## License
 

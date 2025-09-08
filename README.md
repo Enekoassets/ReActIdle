@@ -3,13 +3,28 @@
 # ReActIdle dataset
 ![Front page figure](figures/frontpage.png)
 
-This repository contains the dataset from the paper *Evaluating Idle Animation Believability: a User Perspective*. It also contains scripts to reproduce the results and graphs from the paper. 
+This repository contains the dataset from the paper *Evaluating Idle Animation Believability: a User Perspective*. It also contains scripts to reproduce the results and graphs from the paper.
+
 ## Dataset details
 The repository contains 16 clips of acted idle animations and 10 clips of genuine idle animations. The number of the clip matches the ID of the person performing the animation, so clip *000_genuine.bvh* and *000_acted.bvh* are made by the same person.
 
 The dataset contains 55.039 frames of acted idle motion and 27.273 frames of genuine idle motion.
 
 You can directly clone this repository and use the BVH files provided in the *acted* and *genuine* folders.
+
+## Citing
+If you use this dataset in your research, please cite it as follows:
+```
+@misc{landa2025evaluatingidleanimationbelievability,
+      title={Evaluating Idle Animation Believability: a User Perspective}, 
+      author={Eneko Atxa Landa and Elena Lazkano and Igor Rodriguez and Itsaso Rodríguez-Moreno and Itziar Irigoien},
+      year={2025},
+      eprint={2509.05023},
+      archivePrefix={arXiv},
+      primaryClass={cs.HC},
+      url={https://arxiv.org/abs/2509.05023}, 
+}
+```
 
 ## Reproducing the results
 To reproduce the results from the paper, follow these instructions.
@@ -43,19 +58,6 @@ Then, execute the *plotSpeeds.py* script. You will need to have numpy, pandas, s
 - Warrior idle
 - Neutral idle
 
-## Citing
-If you use this dataset in your research, please cite it as follows:
-```
-@misc{landa2025evaluatingidleanimationbelievability,
-      title={Evaluating Idle Animation Believability: a User Perspective}, 
-      author={Eneko Atxa Landa and Elena Lazkano and Igor Rodriguez and Itsaso Rodríguez-Moreno and Itziar Irigoien},
-      year={2025},
-      eprint={2509.05023},
-      archivePrefix={arXiv},
-      primaryClass={cs.HC},
-      url={https://arxiv.org/abs/2509.05023}, 
-}
-```
 ## License
 
 The dataset provided in this repository is released under the **MIT License**.  

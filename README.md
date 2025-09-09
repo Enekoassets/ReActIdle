@@ -58,6 +58,13 @@ Then, execute the *plotSpeeds.py* script. You will need to have numpy, pandas, s
 - Warrior idle
 - Neutral idle
 
+## License
+
+The dataset provided in this repository is released under the **MIT License**.  
+You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the dataset, under the conditions outlined in the MIT License.
+
+See [LICENSE.txt](LICENSE.txt) for full license text.
+
 ## Examples
 The following videos contain some extracts of the dataset. Would you be able to determine whether each video corresponds to a real or and acted sample?
 
@@ -76,10 +83,3 @@ https://github.com/user-attachments/assets/15136388-2e13-4565-bec9-d0e6e70525f5
 https://github.com/user-attachments/assets/4436cd43-7d5e-4ec3-83ad-d663ed3733c8
 
 The first one is an acted sample, the second one a real one, and so on. Aren't they indistinguishable?
-
-## License
-
-The dataset provided in this repository is released under the **MIT License**.  
-You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the dataset, under the conditions outlined in the MIT License.
-
-See [LICENSE.txt](LICENSE.txt) for full license text.

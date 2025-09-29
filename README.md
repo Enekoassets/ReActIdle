@@ -51,12 +51,23 @@ Then, execute the *plotSpeeds.py* script. You will need to have numpy, pandas, s
 - Catwalk idle
 - Catwalk idle 01
 - Catwalk idle 02
-- Standing idle (2 animations)
+- Standing idle
 - Idle (the first 5 animations that appear in Mixamo)
 - Standard idle
 - Unarmed idle 01 (2 animations)
 - Warrior idle
 - Neutral idle
+- *Wheelbarrow idle has been discarded because it has a different structure*
+
+After putting these 14 animations into a folder named **mixamo**, you can run *createCsvFiles.py* again, but just with the last uncommented part, so you calculate forward kinematics on mixamo animations.
+
+Then, run *normalizeMixamoCsv.py* to normalize all the animations. (You will need the [bvh python package](https://pypi.org/project/bvh/): you can install it with ```pip install bvh```)
+
+After this preprocessing, you will be able to run *mixamoPlotAngularSpeeds.py* and *mixamoPlotSpeeds.py*, to reproduce the following two graphs from the paper.
+
+![Mixamo angular speeds plot](figures/mixamo_speeds.png)
+
+![Mixamo speeds plot](figures/mixamo_angular.png)
 
 ## License
 

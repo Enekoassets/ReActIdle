@@ -23,7 +23,7 @@ def load_data(csv_file):
     return coordinates, unique_joint_names
 
 def compute_speeds(coordinates):
-    time_differences = [0.04167 for x in range(len(coordinates)-1)]
+    time_differences = [0.03333 for x in range(len(coordinates)-1)]
     speeds = []
 
     num_points = coordinates.shape[1] // 3
@@ -47,7 +47,7 @@ def compute_speeds(coordinates):
     return speeds
 
 def compute_accelerations(speeds):
-    time_differences = [0.04167 for x in range(len(coordinates)-1)]
+    time_differences = [0.03333 for x in range(len(coordinates)-1)]
 
     accelerations = []
 
@@ -61,7 +61,7 @@ def compute_accelerations(speeds):
     return accelerations
 
 def compute_jerks(accelerations):
-    time_differences = [0.04167 for x in range(len(coordinates)-1)]
+    time_differences = [0.03333 for x in range(len(coordinates)-1)]
 
     jerks = []
 
@@ -77,6 +77,7 @@ def compute_jerks(accelerations):
 
 folder_path_1 = './genuine/csv/*.csv'
 folder_path_2 = './acted/csv/*.csv'
+# folder_path_3 = './mixamo/csv/*.csv'
 
 plt.figure(figsize=(10, 6))
 
@@ -106,6 +107,7 @@ average_accelerations_list_2 = []
 average_jerks_list_2 = []
 file_names_2 = []
 joint_names_2 = []
+
 for csv_file in glob.glob(folder_path_2):
     coordinates, joint_names_2 = load_data(csv_file)
 
@@ -121,19 +123,46 @@ for csv_file in glob.glob(folder_path_2):
     average_jerks_list_2.append(average_jerks)
     file_names_2.append(csv_file.split("/")[-1])
 
+"""
+average_speeds_list_3 = []
+average_accelerations_list_3 = []
+average_jerks_list_3 = []
+file_names_3 = []
+joint_names_3 = []
+
+for csv_file in glob.glob(folder_path_3):
+    coordinates, joint_names_3 = load_data(csv_file)
+
+    speeds = compute_speeds(coordinates)
+    accelerations = compute_accelerations(speeds)
+    jerks = compute_jerks(accelerations)
+    average_speeds = [np.mean(speeds_for_point) for speeds_for_point in speeds]
+    average_accelerations = [np.mean(accels_for_point) for accels_for_point in accelerations]
+    average_jerks = [np.mean(jerks_for_point) for jerks_for_point in jerks]
+
+    average_speeds_list_3.append(average_speeds)
+    average_accelerations_list_3.append(average_accelerations)
+    average_jerks_list_3.append(average_jerks)
+    file_names_3.append(csv_file.split("/")[-1])
+"""
+
 ############
 ## SPEEDS ##
 ############
 
 avg_speeds_folder_1 = np.mean(average_speeds_list_1, axis=0)
 avg_speeds_folder_2 = np.mean(average_speeds_list_2, axis=0)
+# avg_speeds_folder_3 = np.mean(average_speeds_list_3, axis=0)
 
 std_dev_1 = np.std(average_speeds_list_1, axis=0)
 std_dev_2 = np.std(average_speeds_list_2, axis=0)
+# std_dev_3 = np.std(average_speeds_list_3, axis=0)
 
 plt.plot(avg_speeds_folder_1, label='Real Idle Average', color='red', linewidth=3)
 
 plt.plot(avg_speeds_folder_2, label='Acted Idle Average', color='green', linewidth=3)
+
+# plt.plot(avg_speeds_folder_3, label='Mixamo Idle Average', color='blue', linewidth=3)
 
 plt.fill_between(
     joint_names_1,
@@ -152,7 +181,16 @@ plt.fill_between(
     alpha=0.1,
     label='Acted Idle Std Dev'
 )
-
+"""
+plt.fill_between(
+    joint_names_1,
+    avg_speeds_folder_3 - std_dev_3,
+    avg_speeds_folder_3 + std_dev_3,
+    color='blue',
+    alpha=0.1,
+    label='Mixamo Idle Std Dev'
+)
+"""
 plt.title('Average Speeds from Real and Acted idle animations')
 plt.xlabel('Joint Names')
 plt.ylabel('Speed (m/s)')
@@ -169,13 +207,17 @@ plt.show()
 
 avg_accelerations_folder_1 = np.mean(average_accelerations_list_1, axis=0)
 avg_accelerations_folder_2 = np.mean(average_accelerations_list_2, axis=0)
+# avg_accelerations_folder_3 = np.mean(average_accelerations_list_3, axis=0)
 
 std_dev_1 = np.std(average_accelerations_list_1, axis=0)
 std_dev_2 = np.std(average_accelerations_list_2, axis=0)
+# std_dev_3 = np.std(average_accelerations_list_3, axis=0)
 
 plt.plot(avg_accelerations_folder_1, label='Real Idle Average', color='red', linewidth=3)
 
 plt.plot(avg_accelerations_folder_2, label='Acted Idle Average', color='green', linewidth=3)
+
+# plt.plot(avg_accelerations_folder_3, label='Mixamo Idle Average', color='blue', linewidth=3)
 
 plt.fill_between(
     joint_names_1,
@@ -194,7 +236,16 @@ plt.fill_between(
     alpha=0.1,
     label='Acted Idle Std Dev'
 )
-
+"""
+plt.fill_between(
+    joint_names_1,
+    avg_accelerations_folder_3 - std_dev_3,
+    avg_accelerations_folder_3 + std_dev_3,
+    color='blue',
+    alpha=0.1,
+    label='Acted Idle Std Dev'
+)
+"""
 plt.title('Average Accelerations from Real and Acted idle animations')
 plt.xlabel('Joint Names')
 plt.ylabel('Acceleration (m/s^2)')
@@ -211,13 +262,18 @@ plt.show()
 
 avg_jerks_folder_1 = np.mean(average_jerks_list_1, axis=0)
 avg_jerks_folder_2 = np.mean(average_jerks_list_2, axis=0)
+# avg_jerks_folder_3 = np.mean(average_jerks_list_3, axis=0)
 
 std_dev_1 = np.std(average_jerks_list_1, axis=0)
 std_dev_2 = np.std(average_jerks_list_2, axis=0)
+# std_dev_3 = np.std(average_jerks_list_3, axis=0)
 
 plt.plot(avg_jerks_folder_1, label='Real Idle Average', color='red', linewidth=3)
 
 plt.plot(avg_jerks_folder_2, label='Acted Idle Average', color='green', linewidth=3)
+
+# plt.plot(avg_jerks_folder_3, label='Mixamo Idle Average', color='blue', linewidth=3)
+
 
 plt.fill_between(
     joint_names_1,
@@ -236,6 +292,17 @@ plt.fill_between(
     alpha=0.1,
     label='Acted Idle Std Dev'
 )
+
+"""
+plt.fill_between(
+    joint_names_1,
+    avg_jerks_folder_3 - std_dev_3,
+    avg_jerks_folder_3 + std_dev_3,
+    color='blue',
+    alpha=0.1,
+    label='Acted Idle Std Dev'
+)
+"""
 
 plt.title('Average Jerks from Real and Acted idle animations')
 plt.xlabel('Joint Names')

@@ -69,6 +69,7 @@ After this preprocessing, you will be able to run *mixamoPlotAngularSpeeds.py* a
 ![Mixamo speeds plot](figures/mixamo_angular.png)
 
 ### PCA, t-SNE and UMAP
+These plots need functionalities from sklearn and UMAP to work properly. Install them with ```pip install scikit-learn```, ```pip install umap-learn```. **clustering.py** also needs the bvhTools package: ```pip install bvhTools```.
 #### Real vs Acted plots
 The PCA, t-SNE and UMAP plots depicting the lower dimension representation of real and acted instances can be reproduced running the **clustering.py** script. By changing the *mode* variable in the top of the script, the user can choose between linear and angular time derivatives. Also, by changing the *derivative* variable, the user can choose between using speeds, accelerations or jerks.
 

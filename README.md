@@ -74,13 +74,16 @@ The PCA, t-SNE and UMAP plots depicting the lower dimension representation of re
 
 The following plots are example PCA, t-SNE and UMAP representations using angular speeds.
 
-PCA
+**PCA**
+
 ![pca](figures/pca.png)
 
-t-SNE
+**t-SNE**
+
 ![tsne](figures/tsne.png)
 
-UMAP
+**UMAP**
+
 ![umap](figures/umap.png)
 #### Real, Acted and Mixamo plots
 The PCA, t-SNE and UMAP plots depicting the lower dimension representation of real, acted and Mixamo instances can be reproduced running the **clustering_mixamo.py** script. Again, the Mixamo animations have to be downloaded from the mixamo repository, as explained [here](#speeds).
@@ -89,13 +92,16 @@ Finally, by changing the *derivative* variable, the user can choose between usin
 
 The following plots are example PCA, t-SNE and UMAP representations using angular speeds.
 
-PCA
+**PCA**
+
 ![pca](figures/pca_mixamo.png)
 
-t-SNE
+**t-SNE**
+
 ![tsne](figures/tsne_mixamo.png)
 
-UMAP
+**UMAP**
+
 ![umap](figures/umap_mixamo.png)
 
 ## License

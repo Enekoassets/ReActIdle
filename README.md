@@ -45,7 +45,6 @@ Then, execute the *plotSpeeds.py* script. You will need to have numpy, pandas, s
 
 ![Speeds plot](figures/speeds.png)
 
-
 **Note:** The graphs involving Mixamo animations can not be directly reproduced, as they need the animations from Mixamo, which cannot be redistributed without permission. You can download those animations from Mixamo and edit the scripts to do so. First search the keyword "idle" in Mixamo, and then extract the following animation clips to BVH.
 
 - Catwalk idle
@@ -68,6 +67,36 @@ After this preprocessing, you will be able to run *mixamoPlotAngularSpeeds.py* a
 ![Mixamo angular speeds plot](figures/mixamo_speeds.png)
 
 ![Mixamo speeds plot](figures/mixamo_angular.png)
+
+### PCA, t-SNE and UMAP
+#### Real vs Acted plots
+The PCA, t-SNE and UMAP plots depicting the lower dimension representation of real and acted instances can be reproduced running the **clustering.py** script. By changing the *mode* variable in the top of the script, the user can choose between linear and angular time derivatives. Also, by changing the *derivative* variable, the user can choose between using speeds, accelerations or jerks.
+
+The following plots are example PCA, t-SNE and UMAP representations using angular speeds.
+
+PCA
+![pca](figures/pca.png)
+
+t-SNE
+![tsne](figures/tsne.png)
+
+UMAP
+![umap](figures/umap.png)
+#### Real, Acted and Mixamo plots
+The PCA, t-SNE and UMAP plots depicting the lower dimension representation of real, acted and Mixamo instances can be reproduced running the **clustering_mixamo.py** script. Again, the Mixamo animations have to be downloaded from the mixamo repository, as explained [here](#speeds).
+
+Finally, by changing the *derivative* variable, the user can choose between using angular speeds, angular accelerations and angular jerks.
+
+The following plots are example PCA, t-SNE and UMAP representations using angular speeds.
+
+PCA
+![pca](figures/pca_mixamo.png)
+
+t-SNE
+![tsne](figures/tsne_mixamo.png)
+
+UMAP
+![umap](figures/umap_mixamo.png)
 
 ## License
 

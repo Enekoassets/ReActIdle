@@ -15,15 +15,21 @@ You can directly clone this repository and use the BVH files provided in the *ac
 ## Citing
 If you use this dataset in your research, please cite it as follows:
 ```
-@misc{landa2025evaluatingidleanimationbelievability,
-      title={Evaluating Idle Animation Believability: a User Perspective}, 
-      author={Eneko Atxa Landa and Elena Lazkano and Igor Rodriguez and Itsaso Rodríguez-Moreno and Itziar Irigoien},
-      year={2025},
-      eprint={2509.05023},
-      archivePrefix={arXiv},
-      primaryClass={cs.HC},
-      url={https://arxiv.org/abs/2509.05023}, 
+@article{https://doi.org/10.1002/cav.70116,
+author = {Landa, Eneko Atxa and Lazkano, Elena and Rodriguez, Igor and Rodriguez-Moreno, Itsaso and Irigoien, Itziar},
+title = {Evaluating Idle Animation Believability: A User Perspective},
+journal = {Computer Animation and Virtual Worlds},
+volume = {37},
+number = {3},
+pages = {e70116},
+keywords = {animation, idle motion, motion capture, motion perception},
+doi = {https://doi.org/10.1002/cav.70116},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/cav.70116},
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/cav.70116},
+year = {2026}
 }
+
+
 ```
 
 ## Reproducing the results

@@ -3,19 +3,14 @@
 # ReActIdle dataset
 ![Front page figure](figures/frontpage.png)
 
-This repository contains the dataset from the paper [Evaluating Idle Animation Believability: a User Perspective](https://onlinelibrary.wiley.com/doi/pdf/10.1002/cav.70116). It also contains scripts to reproduce the results and graphs from the paper.
+## 🧭 About
+**Data:** This repository contains the dataset from the paper [Evaluating Idle Animation Believability: a User Perspective](https://onlinelibrary.wiley.com/doi/pdf/10.1002/cav.70116), published in the Computer Animation and Virtual Worlds journal. 
 
-## Project page
-The project page can be found [here](https://enekoassets.github.io/reactidle.html)
+**Code:** It also contains scripts to reproduce the results and graphs from the paper. The provided scripts perform the analysis of the speeds, accelerations and jerks, with direct comparisons and by using PCA, t-SNE and UMAP representations.
 
-## Dataset details
-The repository contains 16 clips of acted idle animations and 10 clips of genuine idle animations. The number of the clip matches the ID of the person performing the animation, so clip *000_genuine.bvh* and *000_acted.bvh* are made by the same person.
+**Project page:** The project page can be found [here](https://enekoassets.github.io/reactidle.html)
 
-The dataset contains 55.039 frames of acted idle motion and 27.273 frames of genuine idle motion.
-
-You can directly clone this repository and use the BVH files provided in the *acted* and *genuine* folders.
-
-## Citing
+## 📖 Citing
 If you use this dataset in your research, please cite it as follows:
 ```
 @article{https://doi.org/10.1002/cav.70116,
@@ -31,19 +26,24 @@ url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/cav.70116},
 eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/cav.70116},
 year = {2026}
 }
-
-
 ```
 
-## Reproducing the results
+## 🧍‍♂️ Data
+The repository contains 16 clips of acted idle animations and 10 clips of genuine idle animations. The number of the clip matches the ID of the person performing the animation, so clip *000_genuine.bvh* and *000_acted.bvh* are made by the same person.
+
+The dataset contains 55.039 frames of acted idle motion and 27.273 frames of genuine idle motion.
+
+You can directly clone this repository and use the BVH files provided in the *acted* and *genuine* folders.
+
+## 📋 Reproducing the results
 To reproduce the results from the paper, follow these instructions.
 
-### Angular speeds
+### ⛹️‍♂️ Angular speeds
 Execute the *plotAngularSpeeds.py* script. You will need to have numpy, scipy and matplotlib. The script will first show the average angular speeds graph from the paper, but it will also show average angular accelerations and jerks.
 
 ![Angular speeds plot](figures/angular_speeds.png)
 
-### Speeds
+### 🏃‍♀️ Speeds
 First, generate the position csv files by running *createCsvFiles.py*. You will need to have [bvhTools](https://github.com/Enekoassets/bvhTools) installed. You can easily install it with:
 
 ``` pip install bvhTools```
@@ -77,7 +77,7 @@ After this preprocessing, you will be able to run *mixamoPlotAngularSpeeds.py* a
 
 ![Mixamo speeds plot](figures/mixamo_angular.png)
 
-### PCA, t-SNE and UMAP
+### 📐 PCA, t-SNE and UMAP plots
 These plots need functionalities from sklearn and UMAP to work properly. Install them with ```pip install scikit-learn```, ```pip install umap-learn```. **clustering.py** also needs the bvhTools package: ```pip install bvhTools```.
 #### Real vs Acted plots
 The PCA, t-SNE and UMAP plots depicting the lower dimension representation of real and acted instances can be reproduced running the **clustering.py** script. By changing the *mode* variable in the top of the script, the user can choose between linear and angular time derivatives. Also, by changing the *derivative* variable, the user can choose between using speeds, accelerations or jerks.
@@ -114,14 +114,14 @@ The following plots are example PCA, t-SNE and UMAP representations using angula
 
 ![umap](figures/umap_mixamo.png)
 
-## License
+## 📋 License
 
 The dataset provided in this repository is released under the **MIT License**.  
 You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the dataset, under the conditions outlined in the MIT License.
 
 See [LICENSE.txt](LICENSE.txt) for full license text.
 
-## Examples
+## 🧪 Examples
 The following videos contain some extracts of the dataset. Would you be able to determine whether each video corresponds to a real or and acted sample?
 
 https://github.com/user-attachments/assets/cb683554-cdbb-41ee-9cb1-c51d150ae50f

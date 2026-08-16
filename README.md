@@ -1,7 +1,8 @@
 # ReActIdle dataset
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-[![Paper](https://img.shields.io/badge/Paper-blue?style=plastic)](https://onlinelibrary.wiley.com/doi/pdf/10.1002/cav.70116)
-[![Preprint](https://img.shields.io/badge/Preprint-green?style=plastic)](https://arxiv.org/abs/2509.05023)
+[![Project page](https://img.shields.io/badge/Project%20page-red)](https://enekoassets.github.io/reactidle.html)
+[![Paper](https://img.shields.io/badge/Paper-blue)](https://onlinelibrary.wiley.com/doi/pdf/10.1002/cav.70116)
+[![Preprint](https://img.shields.io/badge/Preprint-green)](https://arxiv.org/abs/2509.05023)
 
 ![Front page figure](figures/frontpage.png)
 
